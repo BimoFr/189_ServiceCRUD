@@ -15,13 +15,13 @@ const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
     database: 'mahasiswa',
-    password: '',//sesuakan dengan password database masing masing
+    password: 'Bimofr982006',
     port: 5432,
 })
 
 // GET ALL
 app.get('/', (req, res) => {
-    console.log("TEST DATA :");
+    console.log("TEST DATA:");
 
     pool.query('SELECT * FROM biodata ORDER BY id')
         .then(result => {
